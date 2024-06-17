@@ -73,9 +73,7 @@ header.lg-screen {
   height: 100vh;
   width:10vw;
 }
-header.lg-screen a {
-  color:white;
-}
+header.lg-screen a { color:white;}
 #home-icon-cont {
   height:60%;
   padding-top: 30px;
@@ -100,22 +98,14 @@ header.lg-screen a {
   padding-bottom:55px;
   align-items: center;
 }
-#home-social-links i {
-  font-size: 50px;
-}
+#home-social-links i { font-size: 50px; }
 #home-social-links > a {
   margin:10px 0;
   transition: all 0.5s;
 }
-#icon-text-cont{
-  z-index: 3;
-
-}
-.up-on-hover:hover {
-  transform: translateY(-7px);
-}
+#icon-text-cont{z-index: 3;}
+.up-on-hover:hover { transform: translateY(-7px); }
 #about-me-cont {
-  padding:15px 0;
   min-height:50vh;
   display: flex;
   flex-direction: column;
@@ -136,7 +126,12 @@ header.lg-screen a {
   text-align: center;
   font-size: 24px;
 }
-
+#about-me-info-cont2 {
+  background-image: url('./Images/ninja-gif-bg.gif'); 
+  background-size: cover;
+  height: 100vh;
+  display: none;
+}
 #projects-cont {
   min-height:75vh;
   /* border: 1px solid green; */
@@ -169,22 +164,14 @@ width:50%;
 margin: 0px 0 10px 0;
 transition: transform 0.2s;
 }
-#front-end-languages-cont li:hover, #back-end-languages-cont li:hover {
-  transform: scale3d(1.5, 1.5, 1.5);
-}
-#front-end-languages-cont {
-  color:white;
-}
-#back-end-languages-cont {
-  color:#a20303;
-}
+#front-end-languages-cont li:hover, #back-end-languages-cont li:hover { transform: scale3d(1.5, 1.5, 1.5); }
+#front-end-languages-cont { color:white; }
+#back-end-languages-cont { color:#a20303; }
 #front-end-languages-cont h5, #back-end-languages-cont h5 {
   font-size:36px;
   text-decoration: underline;
 }
-#front-end-languages-cont h5, #back-end-languages-cont h5  {
-  text-align: center;
-}
+#front-end-languages-cont h5, #back-end-languages-cont h5  { text-align: center; }
 #back-end-languages-cont li, #front-end-languages-cont li{
 list-style-type: none;
 font-size:82px;
@@ -200,9 +187,7 @@ flex-direction: column;
   right:13vw; */
   font-size: 18px;
 }
-#back-end-languages-cont ul, #front-end-languages-cont ul{
-text-align: center;  
-}
+#back-end-languages-cont ul, #front-end-languages-cont ul{ text-align: center; }
 #projects-cont {
   min-height: 50vh;
   display: flex;
@@ -244,9 +229,7 @@ text-align: center;
   padding-left:50px;
   display: none;
 }
-#contact-cont > div:nth-child(1) > img {
-  width:275px;
-}
+#contact-cont > div:nth-child(1) > img { width:275px; }
 #contact-cont > div:nth-child(2) {
   display:flex;
   flex-direction: column;
@@ -267,9 +250,7 @@ text-align: center;
   margin:0;
   font-weight: 800;
 }
-#contact-cont > div:nth-child(2) > div  > div > span {
-  font-size:24px;
-}
+#contact-cont > div:nth-child(2) > div  > div > span { font-size:24px; }
 #contact-cont > div:nth-child(2) > div  > div > a {
   color:grey;
   font-size:18px;
@@ -282,10 +263,63 @@ text-align: center;
   font-size: 46px;
   text-decoration: underline;
 }
-.pj-div {
-  border-bottom: 1px solid grey;
+.pj-div { border-bottom: 1px solid grey; }
+
+
+/* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 1.0); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus { color: #f1f1f1; }
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+  
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
 /* Anything more then 600px or NOT mobile! IPADs, Tablets*/
 @media screen and (min-width: 600px) {
   header.mobile-nav {
@@ -367,39 +401,20 @@ text-align: center;
 }
 /* Anything more then 1200px or NOT mobile! Laptops, TV's*/
 @media screen and (min-width: 1000px) {
-  header.lg-screen {
-    width:6vw;
-  }
-  #home-main-cont {
-    margin-left:6vw;
-  }
-  #home-icon-cont {
-    padding-top:7px;
-  }
-  #home-icon-cont i {
-    font-size: 36px;
-  }
-  #home-social-links i {
-    font-size: 36px;
-  }
-  #home-icon-cont > a {
-    margin:7px 0;
-  }
-  #home-social-links > a {
-    margin:10px 0;
-  }
-  #home-social-links {
-    padding-bottom: 30px;
-  }
-  #about-me-cont {
-    flex-direction: row;
-  }
-  #about-me-cont p {
-    width:40%;
-  }
+  header.lg-screen { width:6vw; }
+  #home-main-cont { margin-left:6vw; }
+  #home-icon-cont { padding-top:7px; }
+  #home-icon-cont i { font-size: 36px; }
+  #home-social-links i { font-size: 36px; }
+  #home-icon-cont > a { margin:7px 0; }
+  #home-social-links > a { margin:10px 0; }
+  #home-social-links { padding-bottom: 30px; }
   #about-me-cont img {
     width:45%;
-    margin-right:10px;
+    box-shadow: 0 0;
+  }
+  #about-me-info-cont2 {
+    display: block;
   }
   hr.languages-hr {
     transform: rotate(90deg);
@@ -408,9 +423,7 @@ text-align: center;
     width: 43%;
     left: 26vw;
   }
-  #projects-cont > div {
-    width:33%;
-  }
+  #projects-cont > div { width:33%; }
   #pj-div-2 {
     border-left: 1px solid grey;
     border-right: 1px solid grey;
@@ -426,74 +439,7 @@ text-align: center;
     padding-bottom: 25px;
     width:55%;
   }
-  #contact-cont > div:nth-child(1) > img {
-    width:360px;
-  }
-  #contact-cont > div:nth-child(2) {
-    width:40%;
-  }
-  #about-me-cont p {
-    margin: auto auto 85px auto;
-  }
+  #contact-cont > div:nth-child(1) > img { width:360px; }
+  #contact-cont > div:nth-child(2) { width:40%; }
+  #about-me-cont p { margin: auto auto 25px auto; }
 }
-
-
-
-
-
-/* The Overlay (background) */
-.overlay {
-    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-    height: 100%;
-    width: 0;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    background-color: rgb(0,0,0); /* Black fallback color */
-    background-color: rgba(0,0,0, 1.0); /* Black w/opacity */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
-  }
-  
-  /* Position the content inside the overlay */
-  .overlay-content {
-    position: relative;
-    top: 25%; /* 25% from the top */
-    width: 100%; /* 100% width */
-    text-align: center; /* Centered text/links */
-    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-  }
-  
-  /* The navigation links inside the overlay */
-  .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block; /* Display block instead of inline */
-    transition: 0.3s; /* Transition effects on hover (color) */
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-  }
-  
-  /* Position the close button (top right corner) */
-  .overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-  }
-  
-  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-  @media screen and (max-height: 450px) {
-    .overlay a {font-size: 20px}
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
