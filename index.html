@@ -18,10 +18,10 @@
 		</header>
 		<header class='lg-screen'>
 			<div id='home-icon-cont'>
-				<a class='up-on-hover' data-toggle="tooltip" title="About Me" href='#about-me-cont'>
+				<a class='up-on-hover' data-toggle="tooltip" title="About Me" href='#home-intro-div'>
 					<i class="headerI fas fa-user"></i>
 				</a>
-				<a class='up-on-hover' data-toggle="tooltip" title="Developer Toold" href='#languages-cont'>
+				<a class='up-on-hover' data-toggle="tooltip" title="Developer Tools" href='#languages-cont'>
 					<i class="headerI  fas fa-tools"></i>
 				</a>
 				<a class='up-on-hover' data-toggle="tooltip" title="My Projects" href='#projects-cont'>
@@ -59,8 +59,8 @@
 					   <a href='#projects-cont' style='color:grey'>Projects</a> here!
 				</p>
 			</div>
-			<div id ='about-me-info-cont2' class="about-me-info-cont">
-			</div>
+			<div id='about-me-info-cont2' class="about-me-info-cont"></div>
+			<div id="about-me-info-cont3" class="about-me-info-cont"></div>
 		</div>
 		<h3 id='languages-h3' style='text-align:center'>Developer Tools</h3>
 		<div id='languages-cont'>
@@ -246,17 +246,18 @@
 
 		const menuIcons = document.querySelectorAll('.headerI')
 		window.addEventListener('scroll', (e) => {
-			if (window.scrollY <= 657 && window.scrollY >= 0 ) {
+			console.log(window.scrollY);
+			if (window.scrollY >= 0 && window.scrollY <= 1455 ) {
 				menuIcons[0].style.opacity = '1'
 				menuIcons[1].style.opacity = '0.5'
 				menuIcons[2].style.opacity = '0.5'
 				menuIcons[3].style.opacity = '0.5'
-			} else if (window.scrollY >= 657 && window.scrollY <= 1720 ){
+			} else if (window.scrollY >= 1455 && window.scrollY <= 2094 ){
 				menuIcons[0].style.opacity = '0.5'
 				menuIcons[1].style.opacity = '1'
 				menuIcons[2].style.opacity = '0.5'
 				menuIcons[3].style.opacity = '0.5'
-			} else if (window.scrollY >= 1720 && window.scrollY <= 1890){
+			} else if (window.scrollY >= 2094 && window.scrollY <= 2400){
 				menuIcons[0].style.opacity = '0.5'
 				menuIcons[1].style.opacity = '0.5'
 				menuIcons[2].style.opacity = '1'

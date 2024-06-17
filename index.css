@@ -181,19 +181,28 @@ display: flex;
 flex-direction: column;
 
 }
+#back-end-languages-cont ul, #front-end-languages-cont ul{ text-align: center; }
+#front-end-languages-cont {
+  background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("./Images/sub-zero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+#back-end-languages-cont {
+  background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("./Images/scorpion-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
 .fab2 ~ span {
   /* position: absolute;
   bottom:-5px;
   right:13vw; */
   font-size: 18px;
 }
-#back-end-languages-cont ul, #front-end-languages-cont ul{ text-align: center; }
 #projects-cont {
   min-height: 50vh;
   display: flex;
   flex-direction: column;
 }
-
 #pj-div-img {
   width:80%;
   height: 26vh;
