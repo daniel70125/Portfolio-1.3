@@ -126,6 +126,9 @@ header.lg-screen a { color:white;}
   text-align: center;
   font-size: 24px;
 }
+.about-me-emphasized-text {
+  color: #a20303;
+}
 #about-me-info-cont2 {
   background-image: url('./Images/ninja-gif-bg.gif'); 
   background-size: cover;

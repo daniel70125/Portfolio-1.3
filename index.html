@@ -9,7 +9,7 @@
 	<link href="./index.css" rel="stylesheet">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+	<title>Daniel Wright - Portfolio</title>
 </head>
 <body>
 	<div id='home-main-cont'>
@@ -48,13 +48,14 @@
 				<h3 id='h3-intro'>Web Developer</h3>
 			</div>
 		</div>
-		<h5 id='about-me-h5'>Hi, I'm Daniel Wright</h5>
+		<h5 id='about-me-h5'>Daniel Wright</h5>
 		<div id='about-me-cont'>
 			<div class="about-me-info-cont">
 				<p id='about-me-cont-p'>
-					I am a passionate Web Developer with 4 years of experience specializing in HTML, CSS, SQL, JavaScript, and React.
+					Certified <span class="about-me-emphasized-text">Full Stack Developer</span> with 4 years of experience specializing in
+					 <span class="about-me-emphasized-text">HTML, CSS, SQL, JavaScript,</span> and <span class="about-me-emphasized-text">React</span>.
 					 My programming journey began at Operation Spark’s bootcamp, where I discovered my love for coding, and I later earned
-					 my Full Stack Development certification from DevMountain in 2020. Let's connect if you’re looking for a dedicated and
+					 my Full Stack Development certification from <span class="about-me-emphasized-text">DevMountain</span> in 2020. Let's connect if you’re looking for a dedicated and
 					  skilled web developer to join your team or collaborate on exciting projects. You can view my
 					   <a href='#projects-cont' style='color:grey'>Projects</a> here!
 				</p>
@@ -213,6 +214,8 @@
 	
 		</div>
 	</div>
+	<!-- Menu Change on scroll-->
+	<script src="index.js"></script>
 
 	<script src="jquery.js" ></script> <!-- Load jQuery first -->
     <script src="./vanilla-tilt.js"></script>
@@ -240,36 +243,7 @@
 			.start();
 	
 	</script>
-	
-	<!-- Menu Change on scroll-->
-	<script>
 
-		const menuIcons = document.querySelectorAll('.headerI')
-		window.addEventListener('scroll', (e) => {
-			console.log(window.scrollY);
-			if (window.scrollY >= 0 && window.scrollY <= 1455 ) {
-				menuIcons[0].style.opacity = '1'
-				menuIcons[1].style.opacity = '0.5'
-				menuIcons[2].style.opacity = '0.5'
-				menuIcons[3].style.opacity = '0.5'
-			} else if (window.scrollY >= 1455 && window.scrollY <= 2094 ){
-				menuIcons[0].style.opacity = '0.5'
-				menuIcons[1].style.opacity = '1'
-				menuIcons[2].style.opacity = '0.5'
-				menuIcons[3].style.opacity = '0.5'
-			} else if (window.scrollY >= 2094 && window.scrollY <= 2400){
-				menuIcons[0].style.opacity = '0.5'
-				menuIcons[1].style.opacity = '0.5'
-				menuIcons[2].style.opacity = '1'
-				menuIcons[3].style.opacity = '0.5'
-			} else {
-				menuIcons[0].style.opacity = '0.5'
-				menuIcons[1].style.opacity = '0.5'
-				menuIcons[2].style.opacity = '0.5'
-				menuIcons[3].style.opacity = '1'
-			}
-		})
-	</script>
 	<!-- Scroll Reveal CDN-->
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script>
@@ -278,7 +252,7 @@
 		const projectConts = document.querySelectorAll('.pj-div');
 		const contactInputs = document.querySelectorAll('.contact-div-cont');
 
-		console.log(languageSpan);
+		// console.log(languageSpan);
 		ScrollReveal().reveal('#h1-intro', { distance: '100px', delay: 1500, origin: "top", opacity: 0});
 		ScrollReveal().reveal('#h3-intro', { distance: '50px', delay: 1500, origin: "bottom", opacity: 0});
 		ScrollReveal().reveal('#webdev-cert', { distance: '50px', delay: 300, origin: "bottom", opacity: 0});
@@ -316,27 +290,6 @@
 			delay3 = delay3 + 300;
 		}
 
-	</script>
-
-	<!-- Header Settings - Mobile/Laptop View-->
-	<script>
-		const menuBtn = document.querySelector('i');
-		menuBtn.addEventListener('click', (e) => {
-			openNav();
-			menuBtn.style.opacity = '0.0';
-		})
-		/* Open when someone clicks on the span element */
-		function openNav() {
-		document.getElementById("myNav").style.width = "100%";
-		}
-
-		/* Close when someone clicks on the "x" symbol inside the overlay */
-		function closeNav() {
-			setTimeout(() => {
-				menuBtn.style.opacity = '1.0';
-			}, 500);
-		document.getElementById("myNav").style.width = "0%";
-		}
 	</script>
 </body>
 </html>
