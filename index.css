@@ -14,9 +14,9 @@ body {
     box-sizing: border-box;
     scroll-padding-top: 6vh;
 }
-#home-main-cont {
-  /* padding-top:10vh; */
-}
+/* #home-main-cont {
+  padding-top:10vh;
+} */
 #home-intro-div {
     height:75vh;
     background: rgb(0,0,0);
@@ -104,7 +104,11 @@ header.lg-screen a { color:white;}
   transition: all 0.5s;
 }
 #icon-text-cont{z-index: 3;}
-.up-on-hover:hover { transform: translateY(-7px); }
+.up-on-hover:hover {
+   transform: translateX(8px);
+   color: #df0e0e;
+  transform: 2s;
+  }
 #about-me-cont {
   min-height:50vh;
   display: flex;
@@ -322,6 +326,11 @@ flex-direction: column;
   right: 45px;
   font-size: 60px;
 }
+#projects-cont div > div > a > i:hover {
+  color: #df0e0e;
+  transition: 0.5s;
+}
+
   
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {

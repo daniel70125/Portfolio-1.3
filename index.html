@@ -3,6 +3,8 @@
 <head>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- AOS -->
+ <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 <!-- Font Awesome CDN-->
 <script src="https://kit.fontawesome.com/706ae24a0d.js" crossorigin="anonymous"></script>
 	<meta charset="UTF-8">
@@ -224,11 +226,11 @@
 	<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script>
 		const h3Intro = document.querySelector('#h3-intro')
-		// console.log(h1Intro);
 		var typewriter = new Typewriter(h3Intro, {
 			loop: true,
 			delay: 75,
 		});
+		// typewriter effect for h3-intro
 		typewriter
 			.pauseFor(1800)
 			.typeString('Creator<span>&#127912</span>')

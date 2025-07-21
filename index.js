@@ -26,19 +26,19 @@ window.addEventListener('scroll', (e) => {
 
 // Header Settings - Mobile/Laptop View
 const menuBtn = document.querySelector('i');
-		menuBtn.addEventListener('click', (e) => {
-			openNav();
-			menuBtn.style.opacity = '0.0';
-		})
-		/* Open when someone clicks on the span element */
-		function openNav() {
-		document.getElementById("myNav").style.width = "100%";
-		}
+menuBtn.addEventListener('click', (e) => {
+    openNav();
+    menuBtn.style.opacity = '0.0';
+})
+/* Open when someone clicks on the span element */
+function openNav() {
+document.getElementById("myNav").style.width = "100%";
+}
 
-		/* Close when someone clicks on the "x" symbol inside the overlay */
-		function closeNav() {
-			setTimeout(() => {
-				menuBtn.style.opacity = '1.0';
-			}, 500);
-		document.getElementById("myNav").style.width = "0%";
-		}
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+    setTimeout(() => {
+        menuBtn.style.opacity = '1.0';
+    }, 500);
+document.getElementById("myNav").style.width = "0%";
+}
